@@ -7,7 +7,7 @@ import java.util.List;
 public class PracticeSessions1 {
 
     public static void main(String[] args) {
-        insertIntoAString(("1. welcome to America"));
+        reverseAnIntegerList();
     }
 
     public static void insertIntoAString(String words){
@@ -35,5 +35,16 @@ public class PracticeSessions1 {
         String reversedNumberChain = new StringBuffer(numberWord).reverse().toString();
         System.out.print("Hopefully the reverse number chain is: ");
         System.out.println(reversedNumberChain);
+    }
+
+    public static void reverseAnIntegerList(){
+        List<Integer> list = new ArrayList<Integer>();
+        list.add(500);
+        list.add(6000);
+        list.add(5280);
+
+        System.out.println(list);  //easy,easy,easy!
+        Collections.reverse(list);
+        System.out.println(list);
     }
 }

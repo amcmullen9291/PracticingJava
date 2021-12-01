@@ -7,32 +7,37 @@ public class PracticeSessions1 {
 //        insertIntoAString("welcome to America!");
 //        reverseAnIntegerList();
 //        findMissingNumber();
-        removeDuplicatesFromArray();
+        reverseOneNumber();
+//        removeDuplicatesFromArray();
+//        reverseWords("Anthony McMullen"); //needs a word for testing
+//        reverseAnIntegerList();
     }
 
     public static void insertIntoAString(String words){
         String additionalString = "INSERTED WORDS in";
         String replacementString = words.replace("welcome",additionalString);
         System.out.println(replacementString);
-        reverseWords("Continue .2");
     }
 
     public static void reverseWords(String word){
         String newWord = new StringBuffer(word).reverse().toString();
         System.out.println(newWord);
-                ArrayList<Integer> list = new ArrayList<>();
-                list.add(413_546_999);
-
-        reverseOneNumber(list);
     }
 
-    public static void reverseOneNumber(ArrayList<Integer> numbersList){
-        String numberWord = "";
-        for(int number: numbersList){  //only works for one number, not a list
-            String a = String.valueOf(number);
-            numberWord += numberWord+a;
-        }
+    public static void reverseOneNumber(){
+//        String numberWord = "";
+//        ArrayList<Integer> numbersList = new ArrayList<>();
+//        numbersList.add(413_546_999);
+//
+//        for(int number: numbersList){  //only works for one number, not a list
+//            String a = String.valueOf(number);
+//            numberWord += numberWord+a;
+//        }
+
+        int preNumberWord = 5_280;
+        String numberWord = String.valueOf(preNumberWord);
         String reversedNumberChain = new StringBuffer(numberWord).reverse().toString();
+        Integer.valueOf(reversedNumberChain);
         System.out.print("Hopefully the reverse number chain is: ");
         System.out.println(reversedNumberChain);
     }

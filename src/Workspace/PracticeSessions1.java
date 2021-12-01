@@ -73,7 +73,14 @@ public class PracticeSessions1 {
     public static void removeDuplicatesFromArray(){
         Set<Integer> set = new HashSet<Integer>(); //Sets can only have unique values
         int[] array = {1,1,2,2,2,3,3,4,5,6,8};
-
+//        ArrayList<Integer> array = new ArrayList();
+//        array.add(1);
+//        array.add(1);
+//        array.add(3);
+//        array.add(4);
+//        array.add(4);
+//        array.add(1);
+//        array.add(5);
         for (int num : array) {
             set.add(num);  //forces only unique values
         }

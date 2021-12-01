@@ -57,7 +57,7 @@ public class PracticeSessions1 {
         ArrayList solution = new ArrayList();
         int index = 0;
         int solutionsIndex = 0;
-        for (int i = 1; i < numbers[numbers.length - 1]; i++) {
+        for (int i = 0; i < numbers[numbers.length - 1]; i++) {
             if (i == numbers[index]) {
                 index++; //the length() turned into comparing indexes
             }

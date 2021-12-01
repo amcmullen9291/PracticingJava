@@ -1,16 +1,14 @@
 package Workspace;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class PracticeSessions1 {
 
     public static void main(String[] args) {
 //        insertIntoAString("welcome to America!");
 //        reverseAnIntegerList();
-        findMissingNumber();
+//        findMissingNumber();
+        removeDuplicatesFromArray();
     }
 
     public static void insertIntoAString(String words){
@@ -70,5 +68,16 @@ public class PracticeSessions1 {
             solution.add(0,0);
         }
         System.out.println(solution);
+    }
+
+    public static void removeDuplicatesFromArray(){
+        Set<Integer> set = new HashSet<Integer>(); //Sets can only have unique values
+        int[] array = {1,1,2,2,2,3,3,4,5,6,8};
+
+        for (int num : array) {
+            set.add(num);  //forces only unique values
+        }
+        set.toArray();
+        System.out.println(set);
     }
 }

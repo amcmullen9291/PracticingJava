@@ -1,7 +1,6 @@
 package Workspace;
 
 import java.util.*;
-
 public class PracticeSessions1 {
 
     public static void main(String[] args) {
@@ -73,14 +72,23 @@ public class PracticeSessions1 {
     public static void removeDuplicatesFromArray(){
         Set<Integer> set = new HashSet<Integer>(); //Sets can only have unique values
         int[] array = {1,1,2,2,2,3,3,4,5,6,8};
-//        ArrayList<Integer> array = new ArrayList();
-//        array.add(1);
-//        array.add(1);
-//        array.add(3);
-//        array.add(4);
-//        array.add(4);
-//        array.add(1);
-//        array.add(5);
+        new ArrayList<>(Arrays.asList(array)); //changes array to an arrayList
+//        ---------- or ---------------
+//      same thing as above done manually
+
+//        ArrayList<Integer> array2 = new ArrayList();
+//        array2.add(1);
+//        array2.add(1);
+//        array2.add(2);
+//        array2.add(2);
+//        array2.add(2);
+//        array2.add(3);
+//        array2.add(3);
+//        array2.add(4);
+//        array2.add(5);
+//        array2.add(6);
+//        array2.add(8);
+
         for (int num : array) {
             set.add(num);  //forces only unique values
         }

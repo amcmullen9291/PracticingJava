@@ -1,5 +1,11 @@
 package Workspace;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.stream.IntStream;
+
 public class PracticeSessions2  {
 
 
@@ -11,7 +17,7 @@ public class PracticeSessions2  {
         getTypeOfVariable(5_3333333333334D); //double
         getTypeOfVariable("anthony"=="Anthony");
         getTypeOfVariable('b');
-
+        //user can't MAKE/use an array, hashMap, etc. without the programmer knowing it
     }
 
     public static void getTypeOfVariable(Object input){

@@ -60,7 +60,7 @@ public class PracticeSessions1 {
         for (int i = 0; i < numbers[numbers.length - 1]; i++) {
             if (i == numbers[index]) {
                 index++; //the length() turned into comparing indexes
-            }
+            }           //the index number is the same number as the position in the array
             else {
                 solution.add(solutionsIndex,i);
                 solutionsIndex++;

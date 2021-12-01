@@ -7,7 +7,7 @@ public class PracticeSessions1 {
 //        insertIntoAString("welcome to America!");
 //        reverseAnIntegerList();
 //        findMissingNumber();
-        reverseOneNumber();
+//        reverseOneNumber();
 //        removeDuplicatesFromArray();
 //        reverseWords("Anthony McMullen"); //needs a word for testing
 //        reverseAnIntegerList();
@@ -43,7 +43,12 @@ public class PracticeSessions1 {
     }
 
     public static void reverseAnIntegerList(){
-        List<Integer> list = new ArrayList<Integer>();
+//        List<Integer> list = new ArrayList<Integer>();
+//        list.add(500);
+//        list.add(6000);
+//        list.add(5280);
+
+        ArrayList<Integer> list = new ArrayList<>(); //works for both
         list.add(500);
         list.add(6000);
         list.add(5280);
@@ -62,8 +67,8 @@ public class PracticeSessions1 {
         for (int i = 0; i < numbers[numbers.length - 1]; i++) {
             if (i == numbers[index]) {
                 index++; //the length() turned into comparing indexes
-            }           //the index number is the same number as the "number" in the array
-            else {
+            }           //the index number is the same number as the "number"'s position
+            else {         //in the array
                 solution.add(solutionsIndex,i);
                 solutionsIndex++;
             }

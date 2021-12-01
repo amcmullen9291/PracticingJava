@@ -1,13 +1,16 @@
 package Workspace;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 public class PracticeSessions1 {
 
     public static void main(String[] args) {
-        reverseAnIntegerList();
+//        insertIntoAString("welcome to America!");
+//        reverseAnIntegerList();
+        findMissingNumber();
     }
 
     public static void insertIntoAString(String words){
@@ -46,5 +49,26 @@ public class PracticeSessions1 {
         System.out.println(list);  //easy,easy,easy!
         Collections.reverse(list);
         System.out.println(list);
+    }
+
+    public static void findMissingNumber(){
+        int[] numbers = { 11, 6, 4, 5, 7, 1, 15, 12, 13, 19 };
+        Arrays.sort(numbers);
+        ArrayList solution = new ArrayList();
+        int index = 0;
+        int solutionsIndex = 0;
+        for (int i = 1; i < numbers[numbers.length - 1]; i++) {
+            if (i == numbers[index]) {
+                index++; //the length() turned into comparing indexes
+            }
+            else {
+                solution.add(solutionsIndex,i);
+                solutionsIndex++;
+            }
+        }
+        if(solution.isEmpty()){  //if nothing missing
+            solution.add(0,0);
+        }
+        System.out.println(solution);
     }
 }

@@ -9,11 +9,11 @@ public class PracticeSessions2  {
         byte byteVariable = 125; // between-128 and 127
         byte byteVariable2 = (byte)130; // test
         getTypeOfVariable(byteVariable2);
-        // if too big inverses and subtracts the overage when cast
+        // if too big  subtracts the overage and then inverses when cast
         getTypeOfVariable(byteVariable); //test
         short shortVariable = 32000; //between -32,768 and 32,767.
         short shortVariableOverage = (short) 42_900; //test
-        // if too big inverses and subtracts the overage when cast
+        // if too big subtracts the overage and then inverses when cast
         getTypeOfVariable(shortVariableOverage);
         getTypeOfVariable(shortVariable);
         getTypeOfVariable("Good Morning");

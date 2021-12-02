@@ -6,12 +6,22 @@ public class PracticeSessions2  {
 
 
     public static void main(String[] args) {
+        byte byteVariable = 125; // between-128 and 127
+        byte byteVariable2 = (byte)130; // test
+        getTypeOfVariable(byteVariable2);
+        // if too big inverses and subtracts the overage when cast
+        getTypeOfVariable(byteVariable); //test
+        short shortVariable = 32000; //between -32,768 and 32,767.
+        short shortVariableOverage = (short) 42_900; //test
+        // if too big inverses and subtracts the overage when cast
+        getTypeOfVariable(shortVariableOverage);
+        getTypeOfVariable(shortVariable);
         getTypeOfVariable("Good Morning");
         getTypeOfVariable(12_553);
         getTypeOfVariable(5_236_776_900L);
-        getTypeOfVariable(1F);
-        getTypeOfVariable(1.3333333333F);
-        getTypeOfVariable(1.0001000500D);
+        getTypeOfVariable(1.F);
+        getTypeOfVariable(1.33333333335F);
+        getTypeOfVariable(1.0001000500121D);
         getTypeOfVariable("anthony"=="Anthony");
         getTypeOfVariable('b');
         //user can't MAKE/use an array, hashMap, etc. without the programmer knowing it
@@ -45,6 +55,7 @@ public class PracticeSessions2  {
 
             System.out.println("Duplicates: " + countMap);
         }
-    }
+
+}
 
 

@@ -39,7 +39,7 @@ public class PracticeSessions2  {
 
             Map<Integer, Integer> countMap = new HashMap<Integer, Integer>();
             for (int i : numbers) {  //for every number in array
-                Integer j = countMap.get(i); // that line is void. resets counter
+                Integer j = countMap.get(i); // this line is void. resets counter
                 countMap.put(i, (j == null) ? 1 : j + 1); //ternary
             }
 

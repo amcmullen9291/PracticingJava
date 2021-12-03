@@ -55,7 +55,6 @@ public class PracticeSessions2  {
 
             System.out.println("Duplicates: " + countMap);
         }
-
 }
 
 

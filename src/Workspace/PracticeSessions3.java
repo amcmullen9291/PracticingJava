@@ -13,7 +13,8 @@ static List<Person> rollCall;
 //        filterReduceMap();
         studentRoster();
 //        filterByGpa(3.0F);
-        filterByGrade(10);
+//        filterByGrade(10);
+        filterByLastName("Hill");
     }
 
     public static void filterReduceMap() {
@@ -75,6 +76,8 @@ static List<Person> rollCall;
         rollCall.add(new Person(4,"Sam",  "Taylor", 10,3.2f));
         rollCall.add(new Person(5,"Sarah",  "Parker", 12,3.5f));
         rollCall.add(new Person(6,"Tommy", "Hill", 11, 2.8f));
+        rollCall.add(new Person(7,"Daniel", "Hill", 9, 2.8f));
+
     }
 
     public static void filterByGpa(Float currentGpa){
@@ -86,6 +89,11 @@ static List<Person> rollCall;
         rollCall.stream()
                 .filter(student -> student.getGrade() == currentGrade)
                 .forEach(x -> System.out.println(x.firstName +" "+ x.lastName));
+    }
+    public static void filterByLastName(String studentLastName){
+        rollCall.stream()
+                .filter(student -> student.getLastName() == studentLastName)
+                .forEach(x -> System.out.println(x.firstName +" "+ x.lastName +", "+"Grade: "+x.grade));
     }
 
 

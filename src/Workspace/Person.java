@@ -23,4 +23,9 @@ public class Person{
     public int getGrade(){
         return grade;
     }
+
+    public String getLastName(){
+        return lastName;
+    }
+
 }

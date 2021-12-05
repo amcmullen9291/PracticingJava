@@ -80,15 +80,24 @@ static List<Person> rollCall;
 
     }
 
-    public static void filterByGpa(Float currentGpa){
-        rollCall.stream()
-                .filter(student -> student.getGpa() > currentGpa)
-                .forEach(x -> System.out.println(x.firstName +" "+ x.lastName));
+    public static void filterByGpa(Float currentGpa) {
+        if (rollCall != null) {
+            rollCall.stream()
+                    .filter(student -> student.getGpa() > currentGpa)
+                    .forEach(x -> System.out.println(x.firstName + " " + x.lastName));
+        } else {
+            System.out.println("No Records present");
+        }
     }
-    public static void filterByGrade(int currentGrade){
-        rollCall.stream()
-                .filter(student -> student.getGrade() == currentGrade)
-                .forEach(x -> System.out.println(x.firstName +" "+ x.lastName));
+
+    public static void filterByGrade(int currentGrade) {
+        if (rollCall != null) {
+            rollCall.stream()
+                    .filter(student -> student.getGrade() == currentGrade)
+                    .forEach(x -> System.out.println(x.firstName + " " + x.lastName));
+        }else{
+            System.out.println("No Records present");
+        }
     }
     public static void filterByLastName(String studentLastName) {
         boolean recordFound = true;

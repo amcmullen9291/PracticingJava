@@ -31,7 +31,7 @@ public class PracticeSessions1 {
 //
 //        for(int number: numbersList){  //only works for one number, not a list
 //            String a = String.valueOf(number);
-//            numberWord += numberWord+a;
+//            numberWord += a;
 //        }
 
         int preNumberWord = 5_280;
@@ -86,18 +86,18 @@ public class PracticeSessions1 {
 //        ---------- or ---------------
 //      same thing as above done manually
 
-//        ArrayList<Integer> array2 = new ArrayList();
-//        array2.add(1);
-//        array2.add(1);
-//        array2.add(2);
-//        array2.add(2);
-//        array2.add(2);
-//        array2.add(3);
-//        array2.add(3);
-//        array2.add(4);
-//        array2.add(5);
-//        array2.add(6);
-//        array2.add(8);
+//        ArrayList<Integer> array = new ArrayList();
+//        array.add(1);
+//        array.add(1);
+//        array.add(2);
+//        array.add(2);
+//        array.add(2);
+//        array.add(3);
+//        array.add(3);
+//        array.add(4);
+//        array.add(5);
+//        array.add(6);
+//        array.add(8);
 
         for (int num : array) {
             set.add(num);  //forces only unique values

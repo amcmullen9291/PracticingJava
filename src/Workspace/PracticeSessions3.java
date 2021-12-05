@@ -12,9 +12,9 @@ static List<Person> rollCall;
     public static void main(String[] args) {
 //        filterReduceMap();
         studentRoster();
-//        filterByGpa(3.0F);
+        filterByGpa(3.0F);
 //        filterByGrade(10);
-        filterByLastName("Hill");
+//        filterByLastName("Hill");
     }
 
     public static void filterReduceMap() {
@@ -33,6 +33,8 @@ static List<Person> rollCall;
                 .range(1, 10)
                 .sum()); // order changed. sum doesn't print
         System.out.println();
+
+//        Streams
 
         Stream.of("ken", "arron", "william", "shawn", "james")
                 .sorted()
@@ -83,7 +85,7 @@ static List<Person> rollCall;
     public static void filterByGpa(Float currentGpa) {
         if (rollCall != null) {
             rollCall.stream()
-                    .filter(student -> student.getGpa() > currentGpa)
+                    .filter(student -> student.getGpa() >= currentGpa)
                     .forEach(x -> System.out.println(x.firstName + " " + x.lastName));
         } else {
             System.out.println("No Records present");
@@ -103,7 +105,6 @@ static List<Person> rollCall;
         boolean recordFound = true;
         if (rollCall != null) {
             recordFound = (rollCall.stream().anyMatch(x -> x.getLastName() == studentLastName));
-//        }
         rollCall.stream()
                 .filter(student -> student.getLastName() == studentLastName)
                 .forEach(x -> System.out.println(x.firstName + " " + x.lastName + ", " + "Grade " + x.grade));

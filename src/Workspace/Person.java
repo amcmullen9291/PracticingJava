@@ -28,4 +28,8 @@ public class Person{
         return lastName;
     }
 
+    public int getStudentId(){
+        return id;
+    }
+
 }

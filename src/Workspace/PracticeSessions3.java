@@ -14,7 +14,7 @@ static List<Person> rollCall;
         studentRoster();
 //        filterByGpa(3.0F);
 //        filterByGrade(10);
-        filterByLastName("Hill");
+        filterByLastName("Hills");
     }
 
     public static void filterReduceMap() {
@@ -91,8 +91,10 @@ static List<Person> rollCall;
                 .forEach(x -> System.out.println(x.firstName +" "+ x.lastName));
     }
     public static void filterByLastName(String studentLastName){
-        boolean recordFound = (rollCall.stream().anyMatch(x -> x.getLastName() == studentLastName));
-
+        boolean recordFound = true;
+        if(rollCall != null) {
+            recordFound = (rollCall.stream().anyMatch(x -> x.getLastName() == studentLastName));
+        }
         rollCall.stream()
             .filter(student -> student.getLastName() == studentLastName)
             .forEach(x -> System.out.println(x.firstName +" "+ x.lastName +", "+"Grade: "+x.grade));
